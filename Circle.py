@@ -1,4 +1,12 @@
 
+import pymunk
+from random import randrange
+
+# Класс Круг.
+# Входные параметры: масса, радиус.
+# Возможные параметры: коэффициенты трения и упругости.
+# Умеет создаваться в определенном месте
+
 
 class Circle:
     def __init__(self, circle_mass,circle_radius):

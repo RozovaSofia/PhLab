@@ -1,3 +1,10 @@
+import pymunk
+from random import randrange
+
+# Класс Прямоугольник.
+# Входные параметры: масса, сторона x, сторона y.
+# Возможные параметры: коэффициенты трения и упругости.
+# Умеет создаваться в определенном месте
 
 class Square:
     def __init__(self, square_mass,square_size_x,square_size_y):
@@ -5,7 +12,7 @@ class Square:
         self.size_x = square_size_x
         self.size_y = square_size_y
         self.size = (square_size_x,square_size_y)
-        self.moment = pymunk.moment_for_box(square_mass,0,self.size, (0, 0))
+        self.moment = pymunk.moment_for_box(square_mass,self.size)
         self.body = pymunk.Body(self.mass, self.moment)
         self.shape = pymunk.Poly.create_box(self.body, self.size)
         self.shape.elasticity = 0.4
