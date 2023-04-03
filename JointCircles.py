@@ -7,13 +7,13 @@ from PyMunkSettings import *
 
 class RigidConnection:
 
-    def __init__(self,first,second,firstpos):
+    def __init__(self,first,second,firstpos,secondpos):
 
-        first.create(firstpos,space)
-        second.create([600, 50], space)
+        #first.create(firstpos,space)
+        #second.create(secondpos, space)
         self.body = pymunk.PinJoint(first.body,second.body,(0,0))
 
-    def create(self, pos, space):
-        self.body.position = pos
+    def create(self, space):
+        #self.body.position = pos
         space.add(self.body)
 
