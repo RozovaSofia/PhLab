@@ -1,0 +1,45 @@
+Option:
+  Backgroud_Color1: 211
+  Backgroud_Color2: 111
+  Backgroud_Color3: 200
+  WIDTH: 900
+  HEIGHT: 720
+Objects:
+  Square:
+    1s:
+      mass: 12
+      size_x: 100
+      size_y: 100
+      elasticity: 0.3
+      friction: 1
+      pos_x: 300
+      pos_y: 300
+    2s:
+      mass: 12
+      size_x: 100
+      size_y: 100
+      elasticity: 0.3
+      friction: 1
+      pos_x: 600
+      pos_y: 300
+  Circle:
+    1c:
+      mass: 12
+      radius: 30
+      elasticity: 0.3
+      friction: 1
+      pos_x: 450
+      pos_y: 450
+  Platform:
+    1p:
+      width: 2
+      pos1_x: 30
+      pos1_y: 600
+      pos2_x: 900
+      pos2_y: 300
+      elasticity: 0.3
+      friction: 0.5
+
+
+
+
