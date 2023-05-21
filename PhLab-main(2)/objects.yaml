@@ -39,7 +39,27 @@ Objects:
       pos2_y: 300
       elasticity: 0.3
       friction: 0.5
-
-
+    2p:
+      width: 2
+      pos1_x: 30
+      pos1_y: 30
+      pos2_x: 300
+      pos2_y: 30
+      elasticity: 0.3
+      friction: 0.5
+  RigidConnection:
+    1R:
+      first: 1s
+      second: 2s
+#    2R:
+#      first: 1c
+#      second: 1s
+  Spring:
+    1s:
+      first: 1c
+      second: 1s
+      rest_length: 1
+      stiffness: 1
+      damping: 1
 
 
