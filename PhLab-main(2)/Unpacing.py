@@ -1,6 +1,9 @@
+from copy import copy
 from Classes.Platform import Platform
 from Classes.Circle import Circle
 from Classes.Square import Square
+from Classes.Spring import Spring
+from Classes.JointCircles import RigidConnection
 import yaml
 from Constants import space
 from yaml.loader import FullLoader
@@ -21,7 +24,21 @@ class Unpacking_Modul:
 
     def add(self,space):
         a = Unpacking_Modul().Objects()
+        b = {}
         for i in a.keys():
             for j in a[i]:
-                c = globals()[i](a[i][j])
-                c.create(space)
+                if i == "RigidConnection":
+                    c = {"first": b[a[i][j]["first"]], "second": b[a[i][j]["second"]]}
+                    j = globals()[i](c)
+                    j.create(space)
+                elif i == "Spring":
+                    c = {"first": b[a[i][j]["first"]], "second": b[a[i][j]["second"]],
+                         "rest_length": a[i][j]["rest_length"],
+                         "stiffness": a[i][j]["stiffness"], "damping": a[i][j]["damping"]}
+                    j = globals()[i](c)
+                    j.create(space)
+                else:
+                    j1 = copy(j)
+                    j = globals()[i](a[i][j])
+                    b[j1] = j
+                    j.create(space)
