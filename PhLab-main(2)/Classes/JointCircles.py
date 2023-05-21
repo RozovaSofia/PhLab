@@ -7,12 +7,9 @@ from Constants import *
 
 class RigidConnection:
 
-    def __init__(self,first,second,firstpos):
-        first.create(firstpos,space)
-        second.create([600, 50], space)
-        self.body = pymunk.PinJoint(first.body,second.body,(0,0))
+    def __init__(self,a):
+        self.body = pymunk.PinJoint(a["first"].body, a["second"].body)
 
-    def create(self, pos, space):
-        self.body.position = pos
+    def create(self, space):
         space.add(self.body)
 
