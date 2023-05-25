@@ -1,9 +1,13 @@
 Option:
-  Backgroud_Color1: 211
-  Backgroud_Color2: 111
-  Backgroud_Color3: 200
-  WIDTH: 900
-  HEIGHT: 720
+  Backgroud_Color_R: 0
+  Backgroud_Color_G: 0
+  Backgroud_Color_B: 0
+  WIDTH: 1000
+  HEIGHT: 1000
+  FPS: 300
+  gravity_x: 0
+  gravity_y: 1000
+
 Objects:
   Square:
     1s:
@@ -14,43 +18,50 @@ Objects:
       friction: 1
       pos_x: 300
       pos_y: 300
-    2s:
-      mass: 12
-      size_x: 100
-      size_y: 100
-      elasticity: 0.3
-      friction: 1
-      pos_x: 600
-      pos_y: 300
+#    2s:
+#      mass: 12
+#      size_x: 100
+#      size_y: 100
+#      elasticity: 0.3
+#      friction: 1
+#      pos_x: 600
+#      pos_y: 300
   Circle:
     1c:
-      mass: 12
-      radius: 30
+      mass: 10
+      radius: 10
       elasticity: 0.3
       friction: 1
-      pos_x: 450
-      pos_y: 450
+      pos_x: 100
+      pos_y: 100
+    2c:
+      mass: 10
+      radius: 10
+      elasticity: 0.3
+      friction: 1
+      pos_x: 400
+      pos_y: 400
   Platform:
     1p:
       width: 2
-      pos1_x: 30
-      pos1_y: 600
+      pos1_x: 0
+      pos1_y: 500
       pos2_x: 900
-      pos2_y: 300
-      elasticity: 0.3
-      friction: 0.5
-    2p:
-      width: 2
-      pos1_x: 30
-      pos1_y: 30
-      pos2_x: 300
-      pos2_y: 30
-      elasticity: 0.3
-      friction: 0.5
+      pos2_y: 500
+      elasticity: 0
+      friction: 0
+#    2p:
+#      width: 2
+#      pos1_x: 30
+#      pos1_y: 30
+#      pos2_x: 300
+#      pos2_y: 30
+#      elasticity: 0.3
+#      friction: 0.5
   RigidConnection:
     1R:
-      first: 1s
-      second: 2s
+      first: 1c
+      second: 2c
 #    2R:
 #      first: 1c
 #      second: 1s
