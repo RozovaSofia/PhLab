@@ -1,5 +1,5 @@
 import pymunk
-from Constants import *
+from Space import space
 
 # Класс Жесткое Соединение
 # Соединяет два объекта, сохраняя расстояние между ними
