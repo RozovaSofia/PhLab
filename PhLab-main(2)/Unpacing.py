@@ -3,7 +3,9 @@ from Classes.Platform import Platform
 from Classes.Circle import Circle
 from Classes.Square import Square
 from Classes.Spring import Spring
+from Classes.Point import Point
 from Classes.JointCircles import RigidConnection
+from Classes.StaticBody import StaticBody
 import yaml
 from Constants import space
 from yaml.loader import FullLoader
