@@ -1,6 +1,5 @@
-
-from Constants import *
-from Constants import *
+import pymunk
+from Space import space
 
 # Класс Платформа
 # Входные параметры: угол наклона, коэффициент трения, коэффициент упругости.
