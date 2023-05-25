@@ -1,5 +1,5 @@
 import pymunk
-from PyMunkSettings import *
+from Constants import *
 
 # Класс Жесткое Соединение
 # Соединяет два объекта, сохраняя расстояние между ними
@@ -7,13 +7,9 @@ from PyMunkSettings import *
 
 class RigidConnection:
 
-    def __init__(self,first,second,firstpos,secondpos):
-
-        #first.create(firstpos,space)
-        #second.create(secondpos, space)
-        self.body = pymunk.PinJoint(first.body,second.body,(0,0))
+    def __init__(self,a):
+        self.body = pymunk.PinJoint(a["first"].body, a["second"].body)
 
     def create(self, space):
-        #self.body.position = pos
         space.add(self.body)
 

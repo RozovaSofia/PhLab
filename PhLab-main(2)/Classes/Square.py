@@ -7,18 +7,20 @@ from random import randrange
 # Умеет создаваться в определенном месте
 
 class Square:
-    def __init__(self, square_mass,square_size_x,square_size_y):
-        self.mass = square_mass
-        self.size_x = square_size_x
-        self.size_y = square_size_y
-        self.size = (square_size_x,square_size_y)
-        self.moment = pymunk.moment_for_box(square_mass,self.size)
+    def __init__(self, a):
+        self.mass = a["mass"]
+        self.pos_x = a["pos_x"]
+        self.pos_y = a["pos_y"]
+        self.size_x = a["size_x"]
+        self.size_y = a["size_y"]
+        self.size = (self.size_x,self.size_y)
+        self.moment = pymunk.moment_for_box(self.mass,self.size)
         self.body = pymunk.Body(self.mass, self.moment)
         self.shape = pymunk.Poly.create_box(self.body, self.size)
-        self.shape.elasticity = 0.4
-        self.shape.friction = 1.0
+        self.shape.elasticity = a["elasticity"]
+        self.shape.friction = a["friction"]
 
-    def create(self, pos, space):
-        self.body.position = pos
+    def create(self, space):
+        self.body.position = (self.pos_x,self.pos_y)
         self.shape.color = [randrange(256) for i in range(4)]
         space.add(self.body, self.shape)
