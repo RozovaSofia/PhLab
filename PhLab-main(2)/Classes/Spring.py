@@ -1,7 +1,5 @@
-from Constants import *
-from Constants import *
-from Classes.Circle import Circle
-
+import pymunk
+from Space import space
 
 class Spring:
     def __init__(self, a):
