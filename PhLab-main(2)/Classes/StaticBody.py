@@ -18,6 +18,9 @@ class StaticBody:
             self.size = (self.size_x, self.size_y)
             self.shape = pymunk.Poly.create_box(self.body, self.size)
 
+        self.shape.elasticity = a["elasticity"]
+        self.shape.friction = a["friction"]
+
 
     def create (self, space):
         self.body.position = (self.pos_x,self.pos_y)
