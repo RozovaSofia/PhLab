@@ -1,15 +1,14 @@
 from copy import copy
+from Space import space
 from Classes.Platform import Platform
 from Classes.Circle import Circle
 from Classes.Square import Square
 from Classes.Spring import Spring
 from Classes.JointCircles import RigidConnection
 import yaml
-from Constants import space
 from yaml.loader import FullLoader
 #НАДО НАПИСАТЬ КОМЕНТАРИЙ
 class Unpacking_Modul:
-
     def Option(self):
         with open(r".\objects.yaml") as f:
             garbage1 = yaml.load(f, Loader=FullLoader)
