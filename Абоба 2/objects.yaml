@@ -1,0 +1,107 @@
+Option:
+  Backgroud_Color1: 211
+  Backgroud_Color2: 111
+  Backgroud_Color3: 200
+  WIDTH: 900
+  HEIGHT: 720
+Objects:
+#  Point:
+#    1p:
+#      x: 100
+#      y: 100
+  Square:
+    1s:
+      mass: 12
+      size_x: 100
+      size_y: 100
+      elasticity: 0.3
+      friction: 1
+      pos_x: 300
+      pos_y: 300
+#    2s:
+#      mass: 12
+#      size_x: 100
+#      size_y: 100
+#      elasticity: 0.3
+#      friction: 1
+#      pos_x: 600
+#      pos_y: 300
+#  Circle:
+#    1c:
+#      mass: 56
+#      radius: 30
+#      elasticity: 0
+#      friction: 0
+#      pos_x: 450
+#      pos_y: 450
+#  Platform:
+#    1pl:
+#      width: 2
+#      pos1_x: 30
+#      pos1_y: 600
+#      pos2_x: 900
+#      pos2_y: 300
+#      elasticity: 0.3
+#      friction: 0.5
+#    2pl:
+#      width: 2
+#      pos1_x: 30
+#      pos1_y: 30
+#      pos2_x: 300
+#      pos2_y: 30
+#      elasticity: 0.3
+#      friction: 0.5
+#  RigidConnection:
+#    1R:
+#      first: 1p
+#      second: 1c
+#    2R:
+#      first: 1c
+#      second: 1s
+ # Spring:
+  #  1s:
+   #   first: 1c
+    #  second: 1p
+    #  rest_length: 1
+     # stiffness: 1000
+      #damping: 1
+
+  StaticBody:
+    1st:
+      type: triangle
+      pos_x_1 : 50
+      pos_y_1: 500
+      pos_x_2: 700
+      pos_y_2: 100
+      pos_x_3: 500
+      pos_y_3: 300
+      friction: 100
+      elasticity: 10
+
+#    2st:
+#      type: square
+#      size_x: 150
+#      size_y: 150
+#      pos_x : 200
+  #    pos_y : 500
+ #     elasticity: 1
+#      friction: 1000
+
+  Triangle:
+    1t:
+      mass: 20
+
+      pos_x_1: 0
+      pos_y_1: 0
+      pos_x_2: 100
+      pos_y_2: 100
+      pos_x_3: 100
+      pos_y_3: 300
+      elasticity: 0.1
+      friction: 10
+
+
+
+
+
+
